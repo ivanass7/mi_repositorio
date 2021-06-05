@@ -1,0 +1,21 @@
+.boxmodel1 {
+  display: inline-block;
+  text-align: center;
+  background: $color-random-2;
+  color: $color-H2;
+  width: 200px;
+  padding: 4px;
+  margin: 10px;
+  border-style: dotted;
+}
+
+.boxmodel2 {
+  background: $color-random-2;
+  color: $color-H2;
+  width: 180px;
+  padding: 4px;
+  margin: 10px;
+  border: 10px solid black;
+  border-style: double;
+  text-align: center;
+}

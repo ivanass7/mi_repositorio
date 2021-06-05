@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "..\\clasesass"
+		},
+		{
+			"path": "..\\css1"
+		},
+		{
+			"path": "..\\html"
+		},
+		{
+			"path": "..\\imagen"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "clasesass"
+	}
+}

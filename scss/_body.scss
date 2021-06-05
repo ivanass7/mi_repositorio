@@ -1,0 +1,189 @@
+body {
+  background-color: $bg-color;
+}
+
+h2 {
+  @if $h2-if == $color-H2 {
+    color: black;
+  } @else if $h2-if == $color-H3 {
+    color: $color-random-3;
+  } @else if $h2-if == $bg-color {
+    color: $color-random-1;
+  } @else {
+  }
+  color: pink;
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to top, crimson, rgb(161, 103, 55));
+  background-clip: unset;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+h3 {
+  color: $color-H3;
+  font-family: "Dancing Script", cursive;
+}
+
+h4 {
+  color: $color-H4;
+  text-decoration: overline;
+}
+
+p {
+  display: block;
+}
+
+/*---GRID---*/
+.grid {
+  background-color: rgb(226, 172, 180);
+  width: 90vw;
+  height: 70vh;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 25vh 25vh 20vh;
+  grid-template-areas:
+    "titulo img"
+    "p1 img"
+    "click img";
+}
+
+.grid__titulo {
+  grid-area: titulo;
+  font-size: 35px;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.grid__p {
+  grid-area: p1;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.grid__click {
+  grid-area: click;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.grid__img {
+  background-image: url(imagen/img00.jpg);
+  grid-area: img;
+  background-position: left;
+  background-size: cover;
+}
+
+/* TALLES GRID */
+.gridTalle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid $color-H2;
+  border-right: 1px solid $color-H2;
+}
+
+.gridTalle > span {
+  padding: 8px 4px;
+  border-left: 1px solid $color-H2;
+  border-right: 1px solid $color-H2;
+}
+
+/*---FLEXBOX---*/
+.flexbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.flexbox__item {
+  list-style: none;
+  color: black;
+  border: 3px solid black;
+  background-color: rgb(240, 161, 250);
+  width: 180px;
+  margin: 10px;
+  min-height: 40px;
+  text-align: center;
+}
+
+.flexbox2 {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5px;
+}
+
+.flexbox2__item {
+  list-style: lower-alpha;
+  color: black;
+  border: 3px solid crimson;
+  background-color: rgb(240, 161, 250);
+  width: 150px;
+  margin: 10px;
+  height: 200px;
+  min-height: 30px;
+
+  text-align: center;
+}
+
+/*---GRADIENTE, TRANSICIÓN, ANIMACIÓN & TRANSFORMACIÓN---*/
+.flexbox2__item {
+  width: 100px;
+  height: 100px;
+  transition: all 4s;
+}
+
+.flexbox2__item:hover {
+  width: 130px;
+  height: 130px;
+  padding: 15px;
+  background-color: rgb(198, 133, 143);
+}
+
+.formulario {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(226, 172, 180);
+  animation-name: efectoContacto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+
+@keyframes efectoContacto {
+  0% {
+    width: 100px;
+  }
+  25% {
+    width: 300px;
+  }
+  50% {
+    width: 200px;
+    background-color: rgb(198, 133, 143);
+  }
+  75% {
+    width: 300px;
+  }
+  100% {
+    width: 100px;
+    background-color: rgb(199, 75, 116);
+  }
+}
+
+.producto {
+  width: 250px;
+  margin: 0 10px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+.producto img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+.producto:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
